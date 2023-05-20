@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/assets/stars.svg')"
+        "hero-pattern": "url('/assets/stars.svg')",
       },
       colors: {
         gray: {
@@ -70,5 +70,7 @@ module.exports = {
       stripes: "100% 8px",
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+  ],
 };

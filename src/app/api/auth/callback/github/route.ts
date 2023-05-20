@@ -6,6 +6,8 @@ export async function GET(request: NextRequest) {
 
   const code = searchParams.get('code')
 
+  const redirectTo = request.cookies.get('redirectTo')?.value
+
   const registerResponse = await api.post('/register', {
     code,
   })
@@ -14,7 +16,7 @@ export async function GET(request: NextRequest) {
 
   console.log(token)
 
-  const redirectURL = new URL('/', request.url)
+  const redirectURL =  redirectTo ?? new URL('/', request.url)
 
   const cookiesExpiresInSeconds = 60 * 60 * 24 * 30 //30 days
 

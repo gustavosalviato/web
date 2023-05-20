@@ -29,7 +29,7 @@ export default function RootLayout({
             <Copyright />
           </div>
 
-          {children}
+          <div className="p-16">{children}</div>
         </main>
       </body>
     </html>
