@@ -14,9 +14,7 @@ export async function GET(request: NextRequest) {
 
   const { token } = registerResponse.data
 
-  console.log(token)
-
-  const redirectURL =  redirectTo ?? new URL('/', request.url)
+  const redirectURL = redirectTo ?? new URL('/', request.url)
 
   const cookiesExpiresInSeconds = 60 * 60 * 24 * 30 //30 days
 
