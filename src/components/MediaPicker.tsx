@@ -26,14 +26,16 @@ export function MediaPicker() {
         id="media"
       />
 
-      {preview && (
-        // eslint-disable-next-line
-        <img
-          src={preview}
-          alt=""
-          className="w-full aspect-video rounded-lg object-cover"
-        />
-      )}
+      <div className="flex flexcol">
+        {preview && (
+          // eslint-disable-next-line
+          <img
+            src={preview}
+            alt=""
+            className="w-full aspect-video rounded-lg object-cover"
+          />
+        )}
+      </div>
     </div>
   );
 }
